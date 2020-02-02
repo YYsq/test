@@ -1,0 +1,4 @@
+git init 初始化git仓库
+设置当前使用的用户:
+     git config --global user.name "name" 
+     git config --global user.email "邮箱地址"

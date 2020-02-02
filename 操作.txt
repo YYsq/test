@@ -1,9 +1,15 @@
 git init 初始化git仓库
+
 设置当前使用的用户:
      git config --global user.name "name" 
      git config --global user.email "邮箱地址"
+
 把代码存储到.git仓库中
      1.把代码放到仓库的暂存区(门口)
             git add ./当前目录下的哪个文件
      2.把仓库暂存区(门口)的代码放到里面的版本库(房间)中去
              git commit -m "这里是说明 必写 commit是指提交"
+
+git status  查看状态
+      红色表示 没有做任何操作
+      绿色表示 存放在暂存区(门口)

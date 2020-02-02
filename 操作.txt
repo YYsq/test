@@ -16,3 +16,34 @@ git init 初始化git仓库
 git status  查看状态
       红色表示 没有做任何操作
       绿色表示 存放在暂存区(门口)
+
+git中忽略文件
+- .gitignore,在这个文件中可以设置要被忽略的文件或者目录。
+- 被忽略的文件不会被提交仓储里去.
+- 在.gitignore中可以书写要被忽略的文件的路径，以/开头，
+    一行写一个路径，这些路径所对应的文件都会被忽略，
+    不会被提交到仓储中
+    + 写法
+        * ` /.idea  ` 会忽略.idea文件
+        * ` /js`      会忽略js目录里的所有文件
+        * ` /js/*.js` 会忽略js目录下所有js文件
+
+查看曾经的提交记录
+     1.git log              
+     2.git log --oneline   精简版提交记录
+
+版本回退的功能
+       git reset --hard Head~0
+       --hard 覆盖代码    Head~0上一次 Head~1上上次
+       git reset --hard [版本号]    可以精确回到某一次的提交状态
+       git reflog    可以看到所有提交的版本号
+
+分支 
+      默认有一个主分支master
+1.创建分支   git branch 分支名
+    刚创建时分支里面的东西和master主分支一样
+2.切换分支  git checkout 分支名
+3.查看有哪些分支  git branch
+4.合并分支  git merge 分支名
+5.删除分支 git branch -d 分支名
+6.如果合并时有冲突，需要手动处理，处理完成之后需要再提交一次
